@@ -12,4 +12,4 @@
 - Interruptor liga-desliga - flip switch;
 
 ## Esquemático
-!(esquema.PNG)
+![](esquema.PNG)
