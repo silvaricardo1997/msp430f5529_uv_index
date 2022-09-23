@@ -5,8 +5,6 @@
 #include "ssd1306.h"
 #include "delay.h"
 
-
-
 volatile float adc_value;
 volatile float adc_mVoltage;
 volatile int adc_flag = 0;
@@ -21,17 +19,17 @@ void main(void)
 
     WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
     delay_ms(200);              // Para garantir inicializacao dos perifericos
-	ADC_config();
+    ADC_config();
 
-	timerA0_config();
-	ssd1306_display_init();
-	ssd1306_clear();
-
-	ssd1306_print_line(1, "  INICIALIZANDO...");
-	delay_ms(200);
-	ssd1306_clear();
-
-	__enable_interrupt();
+    timerA0_config();
+    ssd1306_display_init();
+    ssd1306_clear();
+	
+    ssd1306_print_line(1, "  INICIALIZANDO...");
+    delay_ms(200);
+    ssd1306_clear();
+    
+   __enable_interrupt();
 
 	while (1)
 	{
